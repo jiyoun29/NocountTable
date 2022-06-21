@@ -13,6 +13,7 @@ public class BoardDto {
     private String bcontent; //내용
     private String bwriter; //작성자
     private String bpw; //비밀번호
+    private String bcategory; //카테고리
 
     //dto-> entity
     public BoardEntity toEntity(){
@@ -22,6 +23,7 @@ public class BoardDto {
                 .bcontent(this.bcontent)
                 .bwriter(this.bwriter)
                 .bpw(this.bpw)
+                .bcategory(this.bcategory)
                 .build();
     }
 }

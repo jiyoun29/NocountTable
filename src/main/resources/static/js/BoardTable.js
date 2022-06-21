@@ -9,11 +9,11 @@
 
 //쓰기 저장
 function save(){
-    alert("세이브 진입");
     //폼 가져오기
     let form = $("#board_write_form")[0];
     let formData = new FormData(form);
     console.log(formData);
+
     $.ajax({
         url : "/writer",
         method : "POST",
@@ -21,17 +21,14 @@ function save(){
         contentType : false, //첨부파일 전송시 사용되는 속성
         processData : false, //true 넣으면 문자열이 날아간다.
         success : function(re){
-            alert("통신 성공");
-        }
-    });
+            if(re == true){
+                alert("게시글이 작성되었습니다.");
+                location.href = "/";
+            } else {
+                alert("게시글 작성 실패");
+            }
+       }
+    })
 }
 
 
-
-
-//모든 게시판 출력
-function alltable(){
-
-
-
-}

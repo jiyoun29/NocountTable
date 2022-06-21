@@ -1,25 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>비회원제 게시판</title>
-<!--부트스트랩-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 </head>
 <body>
-    <h3>자유게시판</h3>
+<div th:replace="header.html::header"></div>
 
-    <a href="/writer">글쓰기</a>
+<div class="container" id="boardlist"  style="text-align:center">
+    <h5>자유게시판</h5>
+    <!-- 여기에 카테고리 버튼 -->
+    <button><a href="/writer">글쓰기</a></button>
 
-    <table id="alltable()">
+    <table class="table" id="alltable">
         <!--뿌리기-->
     </table>
 
+</div>
 
-
-<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
-<!--부트스트랩-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="/js/list.js"></script>
+<script src="/js/BoardTable.js"></script>
 </body>
 </html>

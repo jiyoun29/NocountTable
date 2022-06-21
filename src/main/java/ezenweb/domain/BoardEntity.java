@@ -17,5 +17,6 @@ public class BoardEntity {
     private String bcontent; //내용
     private String bwriter; //작성자
     private String bpw; //비밀번호
+    private String bcategory; //카테고리
 
 }
